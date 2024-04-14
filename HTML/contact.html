@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EngageU - Contact Us</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom,#0483bd, #af19b4);
+            height: 100vh;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .button-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column; /* Ensures buttons are stacked vertically */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: rgba(0,0,0,0.4);
+            color: white; 
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .contact-form {
+            width: 100%; /* Maximum width to fit the container */
+            max-width: 300px; /* Limiting the maximum width */
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+        }
+        input, textarea {
+            width: calc(100% - 20px); /* Reducing width to fit padding */
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            color: #333;
+        }
+        textarea {
+            height: 100px;
+            resize: none; /* Prevents resizing the textarea */
+        }
+        .submit-btn {
+            width: 100%;
+            background-color: #ffffff;
+            color: #333;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #ddd;
+        }
+        .contact-info {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href="D:\Git\HTML\EngageU_Page.html">
+            <button>Home</button>
+        </a>
+        <a href="file:///D:/Git/HTML/pricing.html">
+            <button>Pricing</button>
+        </a>
+    </div>
+    <div class="contact-form">
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+    <div class="contact-info">
+        <p>Contact us at uteach@gmail.com | +1 555 0100</p>
+    </div>
+</body>
+</html>

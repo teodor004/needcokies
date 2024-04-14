@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - UTeach</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #af19b4, #0483bd);
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1, p {
+            text-align: center;
+            margin: 5px 0;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            transition: transform 0.3s ease-in-out, background 0.3s ease;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.3);
+        }
+        h2 {
+            font-weight: 500;
+        }
+        .button {
+            display: block;
+            width: calc(100% - 40px); /* Subtract padding from the width */
+            padding: 10px 20px;
+            margin-top: auto; /* Pushes the button to the bottom */
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .features {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .home-button-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .home-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: rgba(0,0,0,0.4);
+            color: white; 
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+        .home-button:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="home-button-container">
+        <a href="D:\Git\HTML\EngageU_Page.html" class="home-button button">Home</a>
+    </div>
+    
+    <h1>Pricing Plans</h1>
+    <p>Choose a plan that works best for you.</p>
+    
+    <div class="card">
+        <h2>Free Plan</h2>
+        <p>$0/month</p>
+        <p class="features">Features include: access to the demo version of our GPT (versions 3.5)</p>
+        <a href="http://127.0.0.1:5000" class="button">Get Started</a>
+    </div>
+    
+    <div class="card">
+        <h2>Premium Plan</h2>
+        <p>$20/month</p>
+        <p class="features">Features include: newest, constantly updated version of our GPT (version 4)</p>
+        <a href="D:\Git\HTML\soon.html" class="button">Subscribe Now</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EngageU - Full Page Chatbot Coming Soon</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #0483bd, #af19b4);
+            height: 100vh;
+            color: #ffffff;
+            overflow: hidden;
+        }
+        .button-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
+        .chatbot-overlay {
+            position: fixed;
+            bottom: 10%; /* Positioned towards the bottom of the screen */
+            left: 50%;
+            width: 50%; /* Adjusted width */
+            height: 30%; /* Adjusted height */
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column; /* Stacks items vertically */
+            justify-content: space-between; /* Spaces out the elements */
+            align-items: center;
+            z-index: 9;
+            border-radius: 15px;
+            padding: 20px; /* Padding around content */
+        }
+        .chatbot-message {
+            font-size: 1.5em;
+            text-align: center;
+            flex-grow: 1; /* Makes the message take up any extra space */
+        }
+        .chat-input-container {
+            width: 100%; /* Full width of the overlay */
+            display: flex;
+            align-items: center;
+        }
+        input[type="text"] {
+            width: calc(100% - 80px); /* Adjusted width to accommodate the button */
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+        button.send-button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href="D:\Git\HTML\EngageU_Page.html">
+            <button>Home</button>
+        </a>
+        <a href="D:\Git\HTML\pricing.html">
+            <button>Pricing</button>
+        </a>
+        <a href="D:\Git\HTML\contact.html">
+            <button>Contact</button>
+        </a>
+    </div>
+    <div class="chatbot-overlay">
+        <p class="chatbot-message">Im ready to help you!</p>
+        <div class="chat-input-container">
+            <input type="text" name="message" placeholder="Type your message here...">
+            <button class="send-button" id="send-button">Send</button>
+        </div>
+    </div>
+    <script>
+        var generateBtn = document.getElementById('send-button');
+        generateBtn.addEventListener('click', fetchData);
+
+        function fetchData() {
+        fetch('http://127.0.0.1:5000')
+            .then(function (response) {
+            if (response.status !== 200) {
+                console.log(
+                'Looks like there was a problem. Status Code: ' + response.status
+                );
+                return;
+            }
+            response.json().then(function (data) {
+                console.log(data);
+                document.getElementById('w3review').value = data;
+            });
+            })
+            .catch(function (err) {
+            console.log('Fetch Error :-S', err);
+            });
+        }
+    </script>
+</body>
+</html>

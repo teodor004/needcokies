@@ -1,0 +1,40 @@
+body {
+    background: linear-gradient(to bottom, #2294d1 0%, #005177 100%);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: flex-start; /* Align to the left horizontally */
+    height: 100vh; /* Adjusts to full viewport height */
+    color: white; /* Set text color to white */
+    padding: 200px; /* Add padding */
+    font-family: 'Roboto', sans-serif; /* Set font to Roboto */
+}
+
+.heading-3 {
+    font-size: 10vh; /* Size of 10 viewport height */
+    height: 10vh; /* Height of 10 viewport height */
+    margin: 0 0 10px; /* Top and bottom margin of 0, left and right margin of 10px */
+}
+
+.hero-subhead {
+    font-size: 30px; /* Font size of 30 pixels */
+    line-height: 44px; /* Line height of 44 pixels */
+    margin: 10px 0 0; /* Top margin of 10px, bottom margin of 0, left and right margin of 0 */
+}
+
+.image-container {
+    display: flex;
+    align-items: flex-start; /* Center vertically */
+    justify-content: flex-end; /* Align to the right */
+    padding-right: 200px; /* Add left padding to create space between text and image */
+}
+
+.image-container img {
+    height: auto;
+    max-height: 90vh; /* Adjust the maximum height of the image */
+    max-width: 100%; /* Ensure image stays within container */
+    vertical-align: middle;
+}
